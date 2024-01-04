@@ -47,7 +47,8 @@ font-family: 'MedievalSharp', cursive;
   margin-top: 2rem;
   position: absolute;
   top: 0.5rem;
-  left: 43%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: none;
   font-family: 'IM Fell English SC', serif;
   font-size: 1rem;
@@ -77,8 +78,8 @@ img{
 
 #telegraph-light {
   position: absolute;
-  font-size: 1rem; /* 设置字体大小 */
-  opacity: 0; /* 设置初始透明度为1，表示显示 */
-  transition: opacity 1s ease-in-out; /* 添加过渡效果，持续1秒 */
+  font-size: 1rem; 
+  opacity: 0; 
+  transition: opacity 1s ease-in-out; 
   z-index: 1000;
 }
