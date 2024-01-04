@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=MedievalSharp&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Level 1</title>
+  </head>
+  <body>
+    <audio id="backgroundAudio" loop autoplay>
+      <source src="../assets/thunder.wav" type="audio/wav" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <audio id="adrop" src="../assets/drop-12.wav" type="audio/wav"></audio>
+    <audio id="akey" src="../assets/key-drop.mp3" type="audio/mp3"></audio>
+    <audio id="amatches" src="../assets/matches.wav" type="audio/wav"></audio>
+    <audio id="aopendoor" src="../assets/opendoor.wav" type="audio/wav"></audio>
+    <audio
+      id="apasswords"
+      src="../assets/passwords.wav"
+      type="audio/wav"
+    ></audio>
+
+    <canvas id="canvas"></canvas>
+    <p class="hint">hints</p>
+
+    <script type="module" src="./level-1.js"></script>
+  </body>
+</html>
