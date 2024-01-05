@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div class="login">
+    <div>
+        <label>username</label>
+        <input type="text" id="username">
+    </div>
+    <div>
+        <lable>password</lable>
+        <input type="text" id="password">
+    </div>
+    <button id="login_btn">login</button>
+    <button id="register_btn">register</button>
+
+    <div>
+        当前登陆的用户:
+        <span id="loginUserName"></span>
+    </div>
+
+    <div>
+        suoyou yonghu :
+        <span id="userlist"></span>
+    </div>
+
+   </div>
+    
+
+   <script>
+    const loginBtn=document.getElementById("login_btn");
+    const registerBtn=document.getElementById("register_btn");
+
+    function getBody() {
+        const username=document.getElementById("username").value;
+        const password=document.getElementById("password").value;
+        return {
+            username,
+            password
+        }
+    }
+
+    function fetchData(url,body) {
+        fetch(url,{
+            method:"post",
+            headers:{
+                "Content-Type":'application/json;charset=UTF-8'
+            },
+            body:JSON.stringify(body)
+        })
+        
+    } 
+
+    loginBtn.addEventListener("click",async()=>{
+        const body=getBody();
+        const response= await fetchData('http://localhost:3000/login',body);
+        const data=await response.json();
+
+    })
+
+    registerBtn.addEventListener("click",async ()=>{
+        const body=getBody();
+        const response= await fetchData('http://localhost:3000/register',body);
+        const data=await response.json();
+    })
+
+
+
+
+   </script>
+
+</body>
+</html>
