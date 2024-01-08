@@ -111,16 +111,15 @@ document.addEventListener("click", function (e) {
       l2.addEventListener("click", function () {
         window.location.href = "./level-2.html";
       });
+      bonus.addEventListener("click", function () {
+        window.location.href = "http://localhost:5173/"
+      });
+      bonus.style.display="block";
     }
 
     if (l2Completed === "true") {
       l2.innerText = "✅ Level 2";
       l3.innerText = "Level 3";
-
-      bonus.addEventListener("click", function () {
-        window.location.href = "http://localhost:5173/"
-      });
-      bonus.style.display="block";
     }
 
     if (l3Completed === "true") {
