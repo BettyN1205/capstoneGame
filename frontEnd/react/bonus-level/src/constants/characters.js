@@ -63,9 +63,9 @@ const characters = [
     def: 2
   },
   {
-    charName: "kimmy",
+    charName: "Emily",
     hp: 25,
-    img: "kimmy.png",
+    img: "emily.png",
     str: 1,
     def: 9
   },
