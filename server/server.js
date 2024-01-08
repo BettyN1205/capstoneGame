@@ -40,10 +40,17 @@ app.use(async ctx=>{
         }
 
     }
+
     else if(ctx.url==='/register' && ctx.method==='POST'){
         const {username,password}=ctx.request.body;
-        const user=await User.create({username,password});
-        ctx.body={success:true}
+        const existingUser = await User.findOne({ where: { username } });
+        if (existingUser) {
+            ctx.body = { success: false, message: 'Username already exists' };
+        } else {
+            // If the username is unique, create a new user
+            const user = await User.create({ username, password });
+            ctx.body = { success: true, username: user.username };
+        }
 
     }
     else if(ctx.url==='/users' && ctx.method==='GET'){}

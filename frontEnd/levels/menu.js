@@ -1,5 +1,6 @@
 import drawLine from "../functions/drawLine.js";
 
+
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
@@ -10,6 +11,7 @@ const itemArr = [
   { id: "mainMenu", x: startX + 100, y: startY - 50, text: "Menu" },
   { id: "start", x: startX + 100, y: startY, text: "Start Game" },
   { id: "help", x: startX - 100, y: startY - 40, text: "Help" },
+  { id: "login", x: startX + 240, y: startY - 50, text: "Login" },
   { id: "l1", x: startX, y: startY + 80, text: "Levle 1" },
   { id: "l2", x: startX + 100, y: startY + 80, text: "Levle 2🔒" },
   { id: "l3", x: startX + 190, y: startY + 80, text: "Levle 3🔒" },
@@ -38,6 +40,7 @@ const l1 = document.getElementById("l1");
 const l2 = document.getElementById("l2");
 const l3 = document.getElementById("l3");
 const hint = document.querySelector(".hint");
+const login = document.getElementById("login");
 
 const amenu = document.getElementById("amenu");
 
@@ -79,6 +82,10 @@ document.addEventListener("click", function (e) {
     drawLine(startX + 100, startY - 40, startX - 100, startY - 25);
     start.style.display = "block";
     drawLine(startX + 125, startY - 50, startX + 125, startY);
+    login.style.display = "block";
+    drawLine(startX + 100, startY - 40, startX + 240, startY - 40);
+  } else if (e.target === login) {
+    window.location.href = "../pages/login.html";
   } else if (e.target === start) {
     drawLine(startX + 150, startY, startX + 30, startY + 80);
     drawLine(startX + 150, startY, startX + 130, startY + 80);
@@ -87,31 +94,31 @@ document.addEventListener("click", function (e) {
     l2.style.display = "block";
     l3.style.display = "block";
 
-    l1.addEventListener("click",function () {
-        window.location.href = "./level-1.html";
-    })
-    
+    l1.addEventListener("click", function () {
+      window.location.href = "./level-1.html";
+    });
+
     if (l1Completed === "true") {
       l1.innerText = "✅ Level 1";
-      l2.innerText="Level 2";
-      l2.addEventListener("click",function () {
+      l2.innerText = "Level 2";
+      l2.addEventListener("click", function () {
         window.location.href = "./level-2.html";
-    })
-    } 
+      });
+    }
 
     if (l2Completed === "true") {
       l2.innerText = "✅ Level 2";
-      l3.innerText="Level 3";
-      l3.addEventListener("click",function () {
-        window.location.href = "./level-3.html";
-    })
-      
-    } 
- 
+      l3.innerText = "Level 3";
+
+
+      l3.addEventListener("click", function () {
+        window.location.href = "http://localhost:5173/"
+      });
+    }
+
     if (l3Completed === "true") {
       l3.innerText = "✅ Level 3";
-    } 
-
+    }
   } else if (e.target === help) {
     hint.style.display = "block";
     hint.innerHTML = `

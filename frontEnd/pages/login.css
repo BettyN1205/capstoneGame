@@ -170,3 +170,25 @@ input:focus::placeholder {
     background-color:#8a1c1c;
     color: #fff;
 }
+
+.message{
+    color: #fff;
+    margin-top: 10px;
+}
+.back{
+    position: absolute;
+    right: 5rem;
+    bottom: 5rem;
+    color: #fff;
+}
+
+a:link {
+    font-size: 1rem;
+    color: #fff;
+    text-decoration: none;
+    }
+    a:visited {
+    font-size: 1rem;
+    color: #fff;
+    text-decoration: none;
+    }
