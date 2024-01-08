@@ -15,6 +15,8 @@ const itemArr = [
   { id: "l1", x: startX, y: startY + 80, text: "Levle 1" },
   { id: "l2", x: startX + 100, y: startY + 80, text: "Levle 2🔒" },
   { id: "l3", x: startX + 190, y: startY + 80, text: "Levle 3🔒" },
+  { id: "l4", x: startX + 290, y: startY + 80, text: "Levle 4🔒" },
+  { id: "bonus", x: startX + 100, y: startY + 120, text: "🍬Bonus Level" }
 ];
 
 for (let i = 0; i < itemArr.length; i++) {
@@ -39,8 +41,10 @@ const help = document.getElementById("help");
 const l1 = document.getElementById("l1");
 const l2 = document.getElementById("l2");
 const l3 = document.getElementById("l3");
+const l4=document.getElementById("l4");
 const hint = document.querySelector(".hint");
 const login = document.getElementById("login");
+const bonus=document.getElementById("bonus");
 
 const amenu = document.getElementById("amenu");
 
@@ -89,10 +93,13 @@ document.addEventListener("click", function (e) {
   } else if (e.target === start) {
     drawLine(startX + 150, startY, startX + 30, startY + 80);
     drawLine(startX + 150, startY, startX + 130, startY + 80);
-    drawLine(startX + 150, startY, startX + 200, startY + 80);
+    drawLine(startX + 150, startY, startX + 220, startY + 80);
+    drawLine(startX + 150, startY, startX + 290, startY + 80);
     l1.style.display = "block";
     l2.style.display = "block";
     l3.style.display = "block";
+    l4.style.display="block";
+
 
     l1.addEventListener("click", function () {
       window.location.href = "./level-1.html";
@@ -110,16 +117,18 @@ document.addEventListener("click", function (e) {
       l2.innerText = "✅ Level 2";
       l3.innerText = "Level 3";
 
-
-      l3.addEventListener("click", function () {
+      bonus.addEventListener("click", function () {
         window.location.href = "http://localhost:5173/"
       });
+      bonus.style.display="block";
     }
 
     if (l3Completed === "true") {
       l3.innerText = "✅ Level 3";
+      l4.innerText = "Level 4";
     }
-  } else if (e.target === help) {
+  } 
+  else if (e.target === help) {
     hint.style.display = "block";
     hint.innerHTML = `
         <ul>
