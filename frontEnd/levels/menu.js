@@ -12,10 +12,10 @@ const itemArr = [
   { id: "start", x: startX + 100, y: startY, text: "Start Game" },
   { id: "help", x: startX - 100, y: startY - 40, text: "Help" },
   { id: "login", x: startX + 240, y: startY - 50, text: "Login" },
-  { id: "l1", x: startX, y: startY + 80, text: "Levle 1" },
-  { id: "l2", x: startX + 100, y: startY + 80, text: "Levle 2🔒" },
-  { id: "l3", x: startX + 190, y: startY + 80, text: "Levle 3🔒" },
-  { id: "l4", x: startX + 290, y: startY + 80, text: "Levle 4🔒" },
+  { id: "l1", x: startX, y: startY + 80, text: "Level 1" },
+  { id: "l2", x: startX + 100, y: startY + 80, text: "Level 2🔒" },
+  { id: "l3", x: startX + 190, y: startY + 80, text: "Level 3🔒" },
+  { id: "l4", x: startX + 290, y: startY + 80, text: "Level 4🔒" },
   { id: "bonus", x: startX + 100, y: startY + 120, text: "🍬 Bonus Level" }
 ];
 

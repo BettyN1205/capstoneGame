@@ -3,7 +3,7 @@ const hintArry = [
   "There are several paintings on the wall.",
   "An endless grassland, the painting marked '4'.",
   "A tranquil sea, the painting marked '7'.",
-  "A erupting volcano, the painting marked '2'.",
+  "An erupting volcano, the painting marked '2'.",
   "A closet.",
   "A locked door.",
   "A safe with a combination lock, evidently, the code is three numbers.",
